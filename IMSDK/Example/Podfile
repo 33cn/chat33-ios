@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'IMSDK_Example' do
+  pod 'IMSDK', :path => '../'
+
+  target 'IMSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

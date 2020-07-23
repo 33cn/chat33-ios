@@ -1,0 +1,8 @@
+framework module "Chatapi" {
+	header "ref.h"
+    header "Chatapi.objc.h"
+    header "Universe.objc.h"
+    header "Chatapi.h"
+
+    export *
+}

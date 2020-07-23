@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qKV-mC-PeP"/>
+                        <viewControllerLayoutGuide type="bottom" id="LPI-nM-Buz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_head" translatesAutoresizingMaskIntoConstraints="NO" id="RXX-9Q-SJ0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="495.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RXX-9Q-SJ0" secondAttribute="height" multiplier="360:431" id="klS-Pb-n7g"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67O-Rs-Kuy">
+                                <rect key="frame" x="173" y="570.66666666666663" width="68.333333333333314" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" red="0.38039215686274508" green="0.7803921568627451" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="区块链聊天应用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6n-5H-XF0">
+                                <rect key="frame" x="146.33333333333334" y="629.66666666666663" width="121.33333333333334" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.38823529411764707" green="0.7803921568627451" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hTc-5p-rGU">
+                                <rect key="frame" x="172" y="495.66666666666674" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="CeE-cY-Tan"/>
+                                    <constraint firstAttribute="width" constant="70" id="F9A-Ao-bt9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RXX-9Q-SJ0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="53g-fo-uMo"/>
+                            <constraint firstItem="a6n-5H-XF0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8Bp-xI-ZbY"/>
+                            <constraint firstItem="hTc-5p-rGU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="G8g-AV-dFN"/>
+                            <constraint firstItem="67O-Rs-Kuy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QYV-fa-CIy"/>
+                            <constraint firstItem="a6n-5H-XF0" firstAttribute="top" secondItem="67O-Rs-Kuy" secondAttribute="bottom" constant="35" id="eU7-Kg-Xc8"/>
+                            <constraint firstItem="67O-Rs-Kuy" firstAttribute="top" secondItem="hTc-5p-rGU" secondAttribute="top" constant="75" id="id8-YZ-dyM"/>
+                            <constraint firstItem="hTc-5p-rGU" firstAttribute="top" secondItem="RXX-9Q-SJ0" secondAttribute="bottom" id="ntv-kU-uO0"/>
+                            <constraint firstItem="RXX-9Q-SJ0" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="qut-fr-3u4"/>
+                            <constraint firstAttribute="trailing" secondItem="RXX-9Q-SJ0" secondAttribute="trailing" id="xWR-SE-SXX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-612" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launch_head" width="360" height="430.66665649414062"/>
+        <image name="launch_icon" width="70" height="70"/>
+    </resources>
+</document>

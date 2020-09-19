@@ -98,7 +98,7 @@
 		4B1DCF8B216C8ED800A80186 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		4B1DCF8C216C8ED900A80186 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		4B3B533A219BCAEE00D894B2 /* FZMLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FZMLoginManager.swift; sourceTree = "<group>"; };
-		4B492ABB21A6890500AF8114 /* Chat33Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat33Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B492ABB21A6890500AF8114 /* Chat33Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat33Pro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B51F678215384EC00E07248 /* ChatUIMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUIMediator.swift; sourceTree = "<group>"; };
 		4B5A146F219BC3C200C71F27 /* TCWebCodesSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TCWebCodesSDK.framework; path = Chat33/Manager/LoginManager/Lib/TCWebCodesSDK.framework; sourceTree = "<group>"; };
 		4B69AFB721992302009A785D /* FZMShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FZMShareManager.swift; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 				4B69F984215237BE000C7724 /* Chat33.app */,
 				4B69F998215237C2000C7724 /* Chat33Tests.xctest */,
 				4B69F9A3215237C2000C7724 /* Chat33UITests.xctest */,
-				4B492ABB21A6890500AF8114 /* Chat33Test.app */,
+				4B492ABB21A6890500AF8114 /* Chat33Pro.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -365,7 +365,7 @@
 			);
 			name = Chat33Test;
 			productName = Chat33;
-			productReference = 4B492ABB21A6890500AF8114 /* Chat33Test.app */;
+			productReference = 4B492ABB21A6890500AF8114 /* Chat33Pro.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4B69F983215237BE000C7724 /* Chat33 */ = {
@@ -719,8 +719,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.10.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fuzamei.imchat33test;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuzamei.imchat33test.pro;
+				PRODUCT_NAME = Chat33Pro;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chat33/Chat33-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -754,8 +754,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.10.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fuzamei.imchat33test;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuzamei.imchat33test.pro;
+				PRODUCT_NAME = Chat33Pro;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chat33/Chat33-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -917,7 +917,7 @@
 				);
 				MARKETING_VERSION = 2.10.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fuzamei.imchat33;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Chat33Pro;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chat33/Chat33-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -952,7 +952,7 @@
 				);
 				MARKETING_VERSION = 2.10.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fuzamei.imchat33;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Chat33Pro;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chat33/Chat33-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

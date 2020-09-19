@@ -29,10 +29,9 @@ class FZMLoginManager: NSObject {
             let vc = PWLoginViewController.init()
             vc.modalPresentationStyle = .fullScreen
             vc.loginSuccess = {[weak vc] json in
-                if let token = JSON.init(json)["access_token"].string {
-                    let type = 1
+                if let token = JSON.init(json)["token"].string {
                     UIApplication.shared.keyWindow?.showProgress()
-                    IMSDK.shared().login(token: token, type: type, clientId: FZMPushManager.shared().cid, completeBlock: { (response) in
+                    IMSDK.shared().login(token: token, type: 1, clientId: FZMPushManager.shared().cid, completeBlock: { (response) in
                         UIApplication.shared.keyWindow?.hideProgress()
                         if response.success {
                             vc?.dismiss(animated: true, completion: nil)

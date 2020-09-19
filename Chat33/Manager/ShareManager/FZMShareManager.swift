@@ -22,7 +22,7 @@ enum FZMShareType {
     case web(url: String, image: UIImage, title: String, content: String)
 }
 
-let wx_appKey = "wxee2742e706bdceed"
+let wx_appKey = "wx68c4cb485dd08803"
 
 class FZMShareManager: NSObject {
 
@@ -99,7 +99,7 @@ extension FZMShareManager : IMSDKShareInfoDelegate {
         default:
             usePlament = .wxFriend
         }
-        FZMShareManager.shared().share(platment: usePlament, content: .web(url: url, image: #imageLiteral(resourceName: "qrcode_center"), title: "好友邀请您加入区块链聊天——Chat33", content: "Chat33是一款基于区块链技术的聊天应用，可发送比特元BTY等数字资产!")) { (message, success) in
+        FZMShareManager.shared().share(platment: usePlament, content: .web(url: url, image: #imageLiteral(resourceName: "qrcode_center"), title: "好友邀请您加入区块链聊天——Chat33Pro", content: "Chat33Pro是一款基于区块链技术的聊天应用，可发送比特元BTY等数字资产!")) { (message, success) in
             UIApplication.shared.keyWindow?.showToast(with: message)
         }
     }
@@ -112,7 +112,7 @@ extension FZMShareManager : IMSDKShareInfoDelegate {
         default:
             usePlament = .wxFriend
         }
-        FZMShareManager.shared().share(platment: usePlament, content: .web(url: url, image: #imageLiteral(resourceName: "qrcode_center"), title: "好友邀请一起抢\(coinName)红包——Chat33", content: "Chat33是一款基于区块链技术的聊天应用，可发送比特元BTY等数字资产!")) { (message, success) in
+        FZMShareManager.shared().share(platment: usePlament, content: .web(url: url, image: #imageLiteral(resourceName: "qrcode_center"), title: "好友邀请一起抢\(coinName)红包——Chat33Pro", content: "Chat33Pro是一款基于区块链技术的聊天应用，可发送比特元BTY等数字资产!")) { (message, success) in
             UIApplication.shared.keyWindow?.showToast(with: message)
         }
     }

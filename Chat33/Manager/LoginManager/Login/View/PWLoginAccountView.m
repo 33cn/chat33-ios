@@ -3,7 +3,7 @@
 //  PWallet
 //
 //  Created by 于优 on 2018/12/26.
-//  Copyright © 2018 ... All rights reserved.
+//  Copyright © 2018 陈健. All rights reserved.
 //
 
 #import "PWLoginAccountView.h"
@@ -79,6 +79,9 @@
 #pragma mark - Delegate
 
 - (void)textFieldDidChange:(UITextField *)textField {
+    if (self.isEmailStyle) {
+        return;
+    }
     
     if (textField.text.length > self.index) {
         if(textField.text.length == 4 || textField.text.length == 9) {
@@ -98,6 +101,7 @@
         }
         self.index = textField.text.length;
     }
+    
 }
 
 #pragma mark - Action
@@ -168,6 +172,30 @@
         [_accountBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
     }
     return _accountBtn;
+}
+
+- (void)setIsEmailStyle:(BOOL)isMailStyle {
+    _isEmailStyle = isMailStyle;
+    self.accountTF.text = nil;
+    if (isMailStyle) {
+        [self.areaBtn setHidden:YES];
+        self.accountTF.keyboardType = UIKeyboardTypeURL;
+        [self.accountTF mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self);
+            make.bottom.mas_equalTo(self);
+            make.left.equalTo(self.areaBtn.mas_left);
+            make.right.equalTo(self).offset(-27);
+        }];
+    } else {
+        [self.areaBtn setHidden:NO];
+        self.accountTF.keyboardType = UIKeyboardTypeNumberPad;
+        [self.accountTF mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self);
+            make.bottom.mas_equalTo(self);
+            make.left.equalTo(self.areaBtn.mas_right).offset(10);
+            make.right.equalTo(self).offset(-27);
+        }];
+    }
 }
 
 @end

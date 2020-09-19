@@ -3,7 +3,7 @@
 //  PWallet
 //
 //  Created by 于优 on 2018/12/26.
-//  Copyright © 2018 ... All rights reserved.
+//  Copyright © 2018 陈健. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *textContent;
 /** 第一响应 */
 @property (nonatomic, assign) BOOL hasFirstResponder;
+
+@property (nonatomic,assign) BOOL isEmailStyle;
 
 @end
 

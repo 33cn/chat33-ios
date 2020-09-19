@@ -41,6 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configure.shareUrl = "http://put.your.url.here"
         //合约地址
         configure.contractIp = "http://put.your.url.here"
+        //合约代扣私钥
+        configure.contractPriKey = "http://put.your.key.here"
         
         IMSDK.launchApp(configure)
         IMSDK.shared().isEncyptChat = true

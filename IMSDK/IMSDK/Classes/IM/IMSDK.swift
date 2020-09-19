@@ -243,6 +243,7 @@ public class IMSDKConfigureModel: NSObject {
     @objc public var service = ""
     @objc public var serverIp = "" //服务器地址
     @objc public var contractIp = "" //合约地址
+    @objc public var contractPriKey = ""
     @objc public var escrowIp = ""
     @objc public var socketIp = "" //socket服务地址
     @objc public var shareUrl = "" //二维码地址
@@ -295,6 +296,9 @@ public class IMSDKConfigureModel: NSObject {
         }
         if contractIp.count > 0 {
             ContractDomain = contractIp
+        }
+        if contractPriKey.count > 0 {
+            NoBalanceTransactionPrivKey = contractPriKey
         }
         if escrowIp.count > 0 {
             EscrowDomain = escrowIp

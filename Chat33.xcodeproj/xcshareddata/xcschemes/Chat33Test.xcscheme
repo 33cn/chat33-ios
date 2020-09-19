@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4B492A2221A6890500AF8114"
-               BuildableName = "Chat33Test.app"
+               BuildableName = "Chat33Pro.app"
                BlueprintName = "Chat33Test"
                ReferencedContainer = "container:Chat33.xcodeproj">
             </BuildableReference>
@@ -31,7 +31,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B492A2221A6890500AF8114"
-            BuildableName = "Chat33Test.app"
+            BuildableName = "Chat33Pro.app"
             BlueprintName = "Chat33Test"
             ReferencedContainer = "container:Chat33.xcodeproj">
          </BuildableReference>
@@ -54,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B492A2221A6890500AF8114"
-            BuildableName = "Chat33Test.app"
+            BuildableName = "Chat33Pro.app"
             BlueprintName = "Chat33Test"
             ReferencedContainer = "container:Chat33.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B492A2221A6890500AF8114"
-            BuildableName = "Chat33Test.app"
+            BuildableName = "Chat33Pro.app"
             BlueprintName = "Chat33Test"
             ReferencedContainer = "container:Chat33.xcodeproj">
          </BuildableReference>

@@ -9,14 +9,19 @@
 import UIKit
 import UserNotifications
 import PushKit
-import IMSDK
 
 
 #if DEBUG
-let pushAppKey = "5dc924cb570df3de690009d8"
+
+let pushAppId = "UfgXFPggLA8w9eurTvRAA3"
+let pushAppSecret = "lmbRiPnsyb9DdNf18xOjw2"
+let pushAppKey = "W6NC6cxklf65kC3GAKh8kA"
 
 #else
-let pushAppKey = "5e159f9fcb23d26129000311"
+
+let pushAppId = "SAeI8hFG5n5xngUhXHfsp7"
+let pushAppSecret = "S8AXFSuiVF6k4wkKlVSPA3"
+let pushAppKey = "CZAQt3VBHO9nQpgNWgLMaA"
 
 #endif
 
@@ -39,26 +44,13 @@ class FZMPushManager: NSObject {
     
     override init() {
         super.init()
-        
-        UMConfigure.initWithAppkey(pushAppKey, channel: IMSDK.shared().channel == .AppleStore ? "AppStore" : "ThirdParty")
-        let entity = UMessageRegisterEntity.init()
-        entity.types = Int(UMessageAuthorizationOptions.badge.rawValue | UMessageAuthorizationOptions.alert.rawValue | UMessageAuthorizationOptions.sound.rawValue)
-        
-        self.registerRemoteNotification()
-        
-        UMessage.setBadgeClear(false)
-        UMessage.registerForRemoteNotifications(launchOptions: nil, entity: entity) { (granted, error) in
-            if granted {
-                print("友盟推送注册成功")
-            } else {
-                print("友盟推送注册失败")
-            }
-        }
+//        GeTuiSdk.start(withAppId: pushAppId, appKey: pushAppKey, appSecret: pushAppSecret, delegate: self)
+//        self.registerRemoteNotification()
     }
     
     func setBadge(_ count: Int) {
         if count >= 0 {
-            
+//            GeTuiSdk.setBadge(UInt(count))
         }
     }
     
@@ -108,11 +100,6 @@ extension FZMPushManager: UNUserNotificationCenterDelegate {
         
         print("willPresentNotification: %@",notification.request.content.userInfo);
         
-        if let trigger = notification.request.trigger,
-            trigger.isKind(of: UNPushNotificationTrigger.self) {
-            UMessage.setAutoAlert(false)
-            UMessage.didReceiveRemoteNotification(notification.request.content.userInfo)
-        }
         completionHandler([.badge,.sound,.alert]);
     }
     
@@ -120,10 +107,9 @@ extension FZMPushManager: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
         print("didReceiveNotificationResponse: %@",response.notification.request.content.userInfo);
-        if let trigger = response.notification.request.trigger,
-            trigger.isKind(of: UNPushNotificationTrigger.self) {
-            UMessage.didReceiveRemoteNotification(response.notification.request.content.userInfo)
-        }
+        
+        // [ GTSdk ]：将收到的APNs信息传给个推统计
+//        GeTuiSdk.handleRemoteNotification(response.notification.request.content.userInfo);
         
         completionHandler();
     }

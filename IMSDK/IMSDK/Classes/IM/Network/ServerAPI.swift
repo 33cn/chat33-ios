@@ -713,23 +713,28 @@ extension ServerAPI : TargetType {
             dic = ["type": type, "startTime": Int(startTime),"endTime": Int(endTime), "startId": startId, "number": number]
         case .createNoBalanceTransaction(let privateKey, let txHex):
             dic = ["jsonrpc": "2.0",
+                   "id":12333,
             "method": "Chain33.CreateNoBalanceTransaction",
             "params":[["privkey": privateKey,
-                      "txHex": txHex,
-                      "expire": "2h45m"]]]
+                       "txHex": txHex,
+                       "index":0]]]
         case .sign(let privateKey, let txHex, let fee):
             dic = ["jsonrpc": "2.0",
+                   "id":12333,
             "method": "Chain33.SignRawTx",
             "params":[["privkey": privateKey,
                       "txHex": txHex,
                       "expire": "2h45m",
-                      "fee": fee]]]
+                      "fee": fee,
+                      "index":2]]]
         case .sendTransaction(let data):
             dic = ["jsonrpc": "2.0",
+                   "id":12333,
             "method": "Chain33.SendTransaction",
             "params":[["data": data]]]
         case .updateFriends(let params):
             dic = ["jsonrpc": "2.0",
+                   "id":12333,
                    "method": "chat.CreateRawUpdateFriendTx",
                    "params":params]
         case .getFriends(let mainAddress, let count, let index, let time, let publicKey, let signature):
@@ -742,6 +747,7 @@ extension ServerAPI : TargetType {
                                      "sign":["publicKey": publicKey,
                                              "signature": signature]]] as [String : Any]
             dic = ["jsonrpc": "2.0",
+                   "id":12333,
                    "method": "Chain33.Query",
                    "params":[params]]
         case .getUsersInfo(let uids):
